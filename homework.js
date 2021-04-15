@@ -179,9 +179,11 @@ let n = Math.floor(Math.random() * 10);
 const giveMeRandom = function (n) {
   for (let i = 0; i < n; i++) {
     nRandom.push(i);
+
+    return nRandom;
   }
   return nRandom;
-};
+}
 
 /* WHEN YOU ARE FINISHED
 Commit and push the code to your personal GitHub repository and share the link to your commit in Eduflow.
