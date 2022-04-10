@@ -2,7 +2,7 @@
 # JavaScript Algorithms Challenge
 
 # Module 1 / Day 4 at Strive School (EPICODE)
-# Answers in the index.js file
+# Answers in the homework.js file
 
 /*
 ASSIGNMENT RULES
