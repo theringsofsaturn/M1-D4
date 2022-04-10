@@ -9,182 +9,125 @@ ASSIGNMENT RULES
 /* EXERCISE 1
 Write a function "area" which receives 2 parameters (l1,l2) and calculates the area of the associated rectangle.
 */
-
-const calculateArea = function(height, width){
-    let area = height * width
-    return area
-}
-
-let rectangle = calculateArea(8, 10)
-
-console.log("The rectangle area is:" + rectangle)
-
-/* EXERCISE 2
-Write a function "crazySum" which receives two integers. It should return the sum of those two values, but if the two values are the same then it should return their sum multiplied by 3.
-*/
-
-const crazySum =  function(int1, int2){
-    // check if they are the same
-    if (int1 === int2){
-        // if they are the same, add them up and return the total * 3
-        return (int1 + int2) * 3
-    }else{
-        int1 + int2
-        return int1 + int2
-    }
-
-}
-
-let crazySumResult1 = crazySum(2, 4)
-let crazySumResult2 = crazySum(3, 3 )
-
-console.log("If int1 is equal to int2, the result is " + crazySumResult1, "and if int1 is equal to int2, the result is " + crazySumResult2)
-
-/* EXERCISE 3
-Write a function "crazyDiff" that computes the absolute difference between a given number and 19. 
-It should return triple their absolute difference if the given number is greater than 19.
-*/
-
-
-
-const crazyDiff = function(givenNumber, x){
-    
-    if (givenNumber > x){
-        let x = 19
-        return Math.abs(givenNumber - x) * 3
-        
-    }else {
-       
-        return Math.abs(givenNumber - x)
-    }
-
-}
-
-let crazyDiffResult1 = crazyDiff(13, x)
-let crazyDiffResult2 = crazyDiff(24, x)
-
-/* EXERCISE 4
-Write a function "boundary" which accept an integer n and returns true if n is within 20 and 100 (included) or if it's equal to 400.
-*/
-
-/* WRITE YOUR CODE HERE */
-
-const boundary = function(n){
-    // if n is within 20 and 100 AND is equal to 400
-    if (n > 20 && n < 100 || n === 400) {
-       let boundaryBool = true 
-    }else{
-        boundaryBool = false
-    }
-}
-
-/* EXERCISE 5
-Write a function "strivify" which accepts a string.
-It should add the word "Strive" in front of the given string, but if the given string already begins with "Strive", then it should just return the original string.
-*/
-
-/* WRITE YOUR CODE HERE */
-
-let strivify = function(String){
-    let x = "Strive"
-    if (x === "Strive"){
-        return String
-    }else{
-        return x.concat(String)
-    }
-}
-
-let text1 = "School"
-let text2 = "Strive"
-
-console.log("If the string is not 'Strive'." + "The text is " + text2)
-
-/* EXERCISE 6
-Write a function "check3and7" which accepts a positive number and check if it is a multiple of 3 or a multiple of 7.
-HINT: Module Operator
-*/
-
-/* WRITE YOUR CODE HERE */
-
-const check3and7 = function(posNum){
-    let moduleOperatorResult
-    if (Math.sign(posNum) === 1){
-        if (posNum % 3 === 0 || posNum % 7 === 0){
-            moduleOperatorResult === true
-        }else {
-            moduleOperatorResult === false
-        }
-    }
-}
-   
-
-/* EXERCISE 7
-Write a function "reverseString" to programmatically reverse a given string (es.: Strive => evirtS).
-*/
-
-/* WRITE YOUR CODE HERE */
-
-const reverseString = function(str){
-    let newString = ""
-
-    for (let i = str.length - 1; i >= 0; i--) { 
-        newString += str[i]
-
-        return newString
-    }
-}
-
-reverseString("hello")
-
-
-/* EXERCISE 8
-Write a function "upperFirst" to capitalize the first letter of each word of a given string passed as a parameter.
-*/
-
-/* WRITE YOUR CODE HERE */
-
-function upperFirst(words) {
-    let separateWord = words.toLowerCase().split(' ')
-    for (var i = 0; i < separateWord.length; i++) {
-       separateWord[i] = separateWord[i].charAt(0).toUpperCase() +
-       separateWord[i].substring(1)
-    }
-    return separateWord.join(' ')
- }
- console.log(upperFirst("my name is john"))
-
-/* EXERCISE 9
-Write a function "cutString" to create a new string without the first and last character of a given string.
-*/
-
-/* WRITE YOUR CODE HERE */
-
-function cutString(str) {
-    return str.substring(1, str.length - 1);
+function area(l1, l2) {
+    return l1 * l2;
   }
-  console.log(cutString('JavaScript'));
-  console.log(cutString('JS'));
-  console.log(cutString('PHP'));
-
-/* EXERCISE 10
-Write a function "giveMeRandom" which accepts a number n and returns an array containing n random numbers between 0 and 10.
-*/
-
-/* WRITE YOUR CODE HERE */
-
-
-let randomArray = [];
-let n = Math.floor(Math.random() * 10);
-
-const giveMeRandom = function (n) {
-  for (let i = 0; i < n; i++) {
-    nRandom.push(i);
-
-    return nRandom;
+  //const area = (l1, l2) => l1 * l2;
+  
+  const areResult = area(3, 4);
+  console.log(areResult);
+  /* EXERCISE 2
+  Write a function "crazySum" which receives two integers. It should return the sum of those two values, but if the two values are the same then it should return their sum multiplied by 3.
+  */
+  
+  function crazySum(num1, num2) {
+    if (num1 === num2) {
+      return (num1 + num2) * 3;
+    } else {
+      return num1 + num2;
+    }
   }
-  return nRandom;
-}
-
-/* WHEN YOU ARE FINISHED
-Commit and push the code to your personal GitHub repository and share the link to your commit in Eduflow.
-*/
+  // const crazySum = (num1, num2) =>
+  //   num1 === num2 ? (num1 + num2) * 3 : num1 + num2;
+  
+  console.log(crazySum(3, 3));
+  /* EXERCISE 3
+  Write a function "crazyDiff" that computes the absolute difference between a given number and 19. 
+  It should return triple their absolute difference if the given number is greater than 19.
+  */
+  function crazyDiff(num) {
+    if (num > 19) {
+      return Math.abs(num - 19) * 3;
+    } else {
+      return Math.abs(num - 19);
+    }
+  }
+  // const crazyDiff = (num) =>
+  //   num > 19 ? Math.abs(num - 19) * 3 : Math.abs(num - 19);
+  console.log(crazyDiff(3));
+  /* EXERCISE 4
+  Write a function "boundary" which accept an integer n and returns true if n is within 20 and 100 (included) or if it's equal to 400.
+  */
+  
+  function boundary(n) {
+    if ((n > 20 && n <= 100) || n === 400) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  //const boundary = (n) => ((n > 20 && n <= 100) || n === 400 ? true : false);
+  console.log(boundary(3));
+  
+  /* EXERCISE 5
+  Write a function "strivify" which accepts a string.
+  It should add the word "Strive" in front of the given string, but if the given string already begins with "Strive", then it should just return the original string.
+  */
+  
+  function strivify(str) {
+    if (str.startsWith("Strive")) {
+      return str;
+    } else {
+      return "Strive " + str;
+    }
+  }
+  //const strivify = (str) => (str.startsWith("Strive") ? str : "Strive " + str);
+  console.log(strivify("Strivers"));
+  
+  /* EXERCISE 6
+  Write a function "check3and7" which accepts a positive number and check if it is a multiple of 3 or a multiple of 7.
+  HINT: Module Operator
+  */
+  
+  function check3and7(n) {
+    if (n >= 0 && (n % 3 === 0 || n % 7 === 0)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  // const check3and7 = (n) =>
+  //   n >= 0 && (n % 3 === 0 || n % 7 === 0) ? true : false;
+  console.log(check3and7(20));
+  /* EXERCISE 7
+  Write a function "reverseString" to programmatically reverse a given string (es.: Strive => evirtS).
+  */
+  
+  function reverseString(str) {
+    return str.split("").reverse("").join("");
+  }
+  //const reverseString = (str) => str.split("").reverse("").join("");
+  console.log(reverseString("Strive"));
+  
+  /* EXERCISE 8
+  Write a function "upperFirst" to capitalize the first letter of each word of a given string passed as a parameter.
+  */
+  
+  function upperFirst(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  }
+  console.log(upperFirst("strivers"));
+  /* EXERCISE 9
+  Write a function "cutString" to create a new string without the first and last character of a given string.
+  */
+  
+  function cutString(str) {
+    return str.slice(1, str.length - 1);
+  }
+  console.log(cutString("hello"));
+  
+  /* EXERCISE 10
+  Write a function "giveMeRandom" which accepts a number n and returns an array containing n random numbers between 0 and 10.
+  */
+  
+  function giveMeRandom(n) {
+    const arr = [];
+    for (let i = 0; i <= n; i++) {
+      arr.push(Math.floor(Math.random() * 10));
+    }
+    return arr;
+  }
+  console.log(giveMeRandom(5));
+  /* WHEN YOU ARE FINISHED
+  Commit and push the code to your personal GitHub repository and share the link to your commit in Eduflow.
+  */
